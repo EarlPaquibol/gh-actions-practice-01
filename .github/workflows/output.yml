@@ -1,0 +1,11 @@
+name: Output event detail
+on: 
+  issues: 
+    types: [opened]
+  workflow_dispatch:
+jobs:
+  output:
+    - name: Output github context
+      run: |
+        echo "${{ github.event.issue.title }}"
+        echo "${{ github.event.issue.title }}"
