@@ -16,9 +16,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout
       - name: Install dependencies
-        runs: npm ci
+        run: npm ci
       - name: Run tests
-        runs: npm run test
+        run: npm run test
   deploy:
     needs: test
     runs-on: ubuntu-latest
@@ -26,9 +26,9 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout
       - name: Install dependencies
-        runs: npm ci
+        run: npm ci
       - name: Build project
-        runs: npm run build
+        run: npm run build
       - name: Deploy project
-        runs: echo "Deploying project... Success"
+        run: echo "Deploying project... Success"
       
